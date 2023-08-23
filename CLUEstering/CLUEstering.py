@@ -5,6 +5,7 @@ Density based clustering algorithm developed at CERN.
 from dataclasses import dataclass
 import random as rnd
 from math import pi, sqrt
+import os
 import sys
 import time
 import types
@@ -808,7 +809,7 @@ class clusterer:
         None
         """
 
-        out_path = output_folder + file_name
+        out_path = os.path.join(output_folder, file_name)
         data = {}
         for i in range(self.clust_data.n_dim):
             data['x' + str(i)] = self.clust_data.coords[i]
