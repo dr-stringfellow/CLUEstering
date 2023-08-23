@@ -5,7 +5,7 @@ The original algorithm was designed to work in 2 dimensions, with the data distr
 Unlike other clustering algorithms, CLUE takes the coordinates of the points and also their weight, which represents their energy, and calculater the energy density of each point.
 This energy density is used to find the seeds for each cluster, their followers and the outliers, which are dismissed as noise.
 CLUE takes 4 parameters in input: 
-* `dc_`, which is the side of the box inside of which the density of a point is calculated;
+* `dc_`, which is the size of the box inside of which the density of a point is calculated;
 * `rhoc`, which is the minimum energy density that a point must have to not be considered an outlier,
 * `outlierDeltaFactor`, that multiplied by dc_ gives dm_, the side of the box inside of which the followers of a point are searched;
 * `pointsPerBin`, which is the average number of points that are to be found inside a bin. This value allows to control the size of the bins.
